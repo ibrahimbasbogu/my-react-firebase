@@ -23,11 +23,30 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <input type="email" placeholder="E-posta" onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Şifre" onChange={(e) => setPassword(e.target.value)} />
-      <button onClick={handleLogin}>Giriş Yap</button>
-      <label>User Status = {userStatus}</label>
+    <div className="flex items-center justify-center h-screen">
+      <div className="bg-white p-8 rounded shadow-md w-96">
+        <h2 className="text-2xl font-semibold mb-4">Giriş Yap</h2>
+        <div className="mb-4">
+          <input
+            type="email"
+            placeholder="E-posta"
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full px-3 py-2 border rounded"
+          />
+        </div>
+        <div className="mb-4">
+          <input
+            type="password"
+            placeholder="Şifre"
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full px-3 py-2 border rounded"
+          />
+        </div>
+        <button onClick={handleLogin} className="bg-blue-500 text-white px-4 py-2 rounded">
+          Giriş Yap
+        </button>
+        <label className="mt-2 block text-gray-600">User Status = {userStatus}</label>
+      </div>
     </div>
   );
 };

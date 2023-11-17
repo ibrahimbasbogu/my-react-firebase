@@ -2,6 +2,7 @@
 
 import React from 'react';
 import LoginForm from './components/Login';
+import './styles/styles.css'; // Tailwind CSS
 
 function App() {
   return (
