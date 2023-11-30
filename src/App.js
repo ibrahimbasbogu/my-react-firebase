@@ -1,15 +1,19 @@
 // src/App.js
 
 import React from 'react';
-import LoginForm from './components/Login';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/styles.css'; // Tailwind CSS
+import Login from './components/Login';
+import Profile from './components/Profile';
 
 function App() {
   return (
-    <div className="App">
-      <h1>React Firebase Auth</h1>
-      <LoginForm />
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/login' element={<Login />}/>
+        <Route path='/index' element={<Profile />}/>
+      </Routes>
+    </Router>
   );
 }
 
